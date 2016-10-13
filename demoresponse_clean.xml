@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+<soap:Header>
+</soap:Header>
+<soap:Body xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+<ns2:initTransactionResponse xmlns:ns2="http://service.wswebpay.webpay.transbank.com/">
+<return>
+    <token>e527ce298bcde4dafcc35103bd36dc6b48788c8a98119d10275397b1d1817b22</token>
+    <url>https://webpay3gint.transbank.cl/filtroUnificado/initTransaction</url>
+</return>
+</ns2:initTransactionResponse>
+</soap:Body>
+</soap:Envelope>

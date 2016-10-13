@@ -1,0 +1,23 @@
+{
+  "name": "verify-xml",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gespenstt/verify-xml.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gespenstt/verify-xml/issues"
+  },
+  "homepage": "https://github.com/gespenstt/verify-xml#readme",
+  "dependencies": {
+    "xml-crypto": "^0.8.4",
+    "xpath": "0.0.23"
+  }
+}
