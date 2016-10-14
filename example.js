@@ -17,6 +17,7 @@ function validateXml(xml, key)
 {
   var doc = new dom().parseFromString(xml)    
   var signature = select(doc, "/*/*[local-name(.)='Signature' and namespace-uri(.)='http://www.w3.org/2000/09/xmldsig#']")[0]
+  console.log(signature.toString())
   var sig = new SignedXml()
   sig.keyInfoProvider = new FileKeyInfo(key)
   sig.loadSignature(signature.toString())
@@ -34,16 +35,16 @@ var xml = "<library>" +
 //sign an xml document
 signXml(xml, 
   "//*[local-name(.)='book']", 
-  "client.pem", 
-  "result.xml")
+  "example/client.pem",
+  "example/result.xml")
 
 console.log("xml signed succesfully")
 
-var signedXml = fs.readFileSync("result.xml").toString()
+var signedXml = fs.readFileSync("example/result.xml").toString()
 console.log("validating signature...")
 
 //validate an xml document
-if (validateXml(signedXml, "client_public.pem"))
+if (validateXml(signedXml, "example/client_public.pem"))
   console.log("signature is valid")
 else
   console.log("signature not valid")
